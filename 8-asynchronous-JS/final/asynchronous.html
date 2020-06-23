@@ -96,10 +96,11 @@
         // getRecipesAW().then(result => console.log(`${result} is the best ever!`));
 
         function getWeather(woeid) {
+            //Fetch method takes API URL as an input and return promises
             fetch(`https://crossorigin.me/https://www.metaweather.com/api/location/${woeid}/`)
             .then(result => {
                 // console.log(result);
-                return result.json();
+                return result.json(); // return promises
             })
             .then(data => {
                 // console.log(data);
